@@ -1,0 +1,19 @@
+DROP DATABASE IF EXISTS rs;
+
+CREATE DATABASE rs;
+
+USE rs;
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users(
+ id_user INT PRIMARY KEY AUTO_INCREMENT,
+ email VARCHAR(255) NOT NULL UNIQUE,
+ pseudo VARCHAR(255) NOT NULL UNIQUE,
+ sexe ENUM('m','f', 'o') DEFAULT 'o',
+ password VARCHAR(255) NOT NULL,
+ date_naissance DATE NOT NULL,
+ date_inscription BIGINT UNSIGNED DEFAULT UNIX_TIMESTAMP(),
+ photo_profil VARCHAR(255) DEFAULT 'img/unknow.png',
+ description LONGTEXT
+);
