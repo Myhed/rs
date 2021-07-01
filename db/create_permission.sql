@@ -1,0 +1,1 @@
+GRANT INSERT, SELECT ON inscription.users TO 'myhed'@'localhost' WITH GRANT OPTION;

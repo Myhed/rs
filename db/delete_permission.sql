@@ -1,0 +1,1 @@
+REVOKE SELECT ON inscription.users FROM 'myhed'@'localhost';
