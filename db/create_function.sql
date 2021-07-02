@@ -1,0 +1,13 @@
+DROP FUNCTION IF EXISTS maFunction;
+DELIMITER //
+
+CREATE FUNCTION maFunction()
+    RETURNS INT
+    DETERMINISTIC
+    LANGUAGE SQL
+    NO SQL
+    BEGIN 
+        RETURN @params;
+    END //
+
+DELIMITER ;
